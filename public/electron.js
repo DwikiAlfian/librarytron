@@ -22,6 +22,7 @@ function createWindow() {
     minWidth: 1128,
     minHeight: 640,
     title: "Management App",
+    hasShadow: false,
     // Hide The Frame
     frame: false,
     transparent: true,
