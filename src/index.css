@@ -1,11 +1,67 @@
+/* ================== */
+/* Import Font Family */
+/* ================== */
+/* Lexend */
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/fonts/lexend.ttf");
+}
+/* Quicksand */
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/quicksand.ttf");
+}
+/* ================== */
+/* ================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand";
+  outline: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lexend";
 }
 body {
+  color: white;
   overflow: hidden;
 }
+a {
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: background 150ms;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -22,6 +78,7 @@ body {
   height: calc(100vh - 5px);
   width: calc(100vw - 5px);
   box-shadow: 0 0 3px 0 rgba(30, 30, 30, 0.35);
+  overflow: hidden;
 }
 .app-navigation {
   position: fixed;
@@ -55,6 +112,9 @@ body {
   border: 1px solid white;
   transition: background-color 150ms, color 150ms;
 }
+.app-navigation-button svg {
+  color: rgba(20, 20, 20);
+}
 .app-navigation-button:hover {
   background-color: rgba(255, 255, 255, 0);
   color: white;
@@ -62,4 +122,131 @@ body {
 
 .gap-5 {
   gap: 5px;
+}
+
+/* CS */
+.cs-top-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 75px;
+}
+.cs-navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 5px;
+  border-radius: 75px;
+}
+.cs-navbar a.cs-navbar-active {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+.cs-navbar a {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 35px;
+  padding: 15px 25px;
+  font-size: 0.86rem;
+  font-weight: bold;
+  transition: background-color 150ms;
+}
+.cs-navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.035);
+}
+
+.cs-user-logged {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px 7px 7px;
+  border-radius: 75px;
+  transition: background-color 150ms;
+}
+.cs-user-logged:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+.cs-user-logged-profile {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cs-column {
+  display: flex;
+  flex-direction: column;
+}
+.cs-column.cs-column-scroll {
+  overflow-y: scroll;
+  height: 68%;
+}
+.cs-span-title {
+  color: white;
+  font-weight: bold;
+  font-family: "Lexend";
+}
+.cs-span-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.cs-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 55px;
+  padding: 25px 75px;
+  height: 100%;
+}
+.cs-grid-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.cs-input {
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0)
+  );
+  color: white;
+  padding: 10px 20px;
+  border-radius: 35px;
+}
+
+.cs-lists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 35px;
+  gap: 25px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 75px 0 0 75px;
+  opacity: 0.7;
+  transition: opacity 150ms;
+}
+.cs-lists:hover {
+  opacity: 1;
+}
+.cs-lists .cs-lists-content {
+  padding: 25px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0)
+  );
+  width: 100%;
+  border-radius: 75px 0 0 75px;
+}
+
+.cs-fw {
+  width: 100%;
 }
